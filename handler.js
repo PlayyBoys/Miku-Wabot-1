@@ -569,26 +569,20 @@ Untuk mematikan fitur ini, ketik
 global.dfail = (type, m, conn) => {
 	let name = conn.getName(m.sender)
   let msg = {
-    rowner: `*Owner Only!!!*\nPerintah Khusus Owner Onii Chan!`,
-    owner: `*Owner Only!!!*\nPerintah Khusus Owner Onii Chan!`,
-    mods: `*Moder Only!!!*\nPerintah Khusus Moder Onii Chan!`,
-    premium: '*Premium Only!!!*\nMakanya Beli Premium Onii Chan!',
-    group: '*Group Only!!!*\nCommand Ini Cuma Bisa Di Group Onii Chan!',
-    private: '*Private Only!!!*\nCommand Ini Cuma Bisa Di Private Onii Chan!',
-    admin: '*Admin Only!!!*\nPerintah ini hanya untuk Admin Group Onii Chan!',
-    nsfw: `*Iyann Only!!!*\nPerintah Ini Cuma Bisa Di Aktifkan Oleh Iyann Onii Chan!`,
-    botAdmin: '*Bot Admin Only!!!*\nPerintah Ini Cuma Bisa Kalo Bot Jadi Admin Onii Chan!',
-    }[type]
-  if (msg) return m.reply(msg)
-  
-    let msgg = {
-  unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar nama.16*`
+    rowner: `❌Perintah ditolak❌\n\nSilahkan hubungi @${global.kontak[0].split`@`[0]}`,
+    owner: `❌⚠️Perintah ditolak⚠️❌\n\nSilahkan hubungi @${global.kontak[0].split`@`[0]}`,
+    mods: `❌Perintah ditolak❌\n\nSilahkan hubungi @${global.kontak[0].split`@`[0]}`,
+    premium: '❌Perintah Ini khusus pengguna _*Premium*_ !',
+    group: 'Perintah ini hanya dapat digunakan di grup!',
+    private: '❌Perintah ditolak❌\n\nGunakan Perintah ini di Chat Pribadi bot',
+    admin: 'Perintah ini hanya untuk *Admin* grup!',
+    nsfw: `Perintah ini hanya bisa diaktifkan oleh @${global.kontak[0].split`@`[0]}`,
+    botAdmin: 'Jadikan Bot sebagai admin untuk menggunakan perintah ini\n\nDenger ya dekkk!!!\nApakah orang yang tidak menjadi admin bisa menambahkan member???!!!!!',
+    unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar nama.16*`
   }[type]
   if (msg) return m.reply(msg)
 }
 
-
-let wm = global.wm
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
