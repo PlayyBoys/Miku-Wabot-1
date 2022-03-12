@@ -582,13 +582,11 @@ global.dfail = (type, m, conn) => {
   if (msg) return m.reply(msg)
   
     let msgg = {
-  unreg: `Halo kak @${syappa.replace(/@.+/, '')} !
-Kamu Belum Terdaftar Di Database Bot
-Silahkan Daftar Dengan Klik Button Dibawah 
-`
-}[type]
-  if (msgg) return conn.sendButton(m.chat, msgg, Daftar, 'REGISTRASI', `.daftar ${namae}.18`, m, { contextInfo: { mentionedJid: [syappa] }})
+  unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar nama.16*`
+  }[type]
+  if (msg) return m.reply(msg)
 }
+
 
 let wm = global.wm
 let fs = require('fs')
