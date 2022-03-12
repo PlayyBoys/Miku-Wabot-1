@@ -587,7 +587,7 @@ Kamu Belum Terdaftar Di Database Bot
 Silahkan Daftar Dengan Klik Button Dibawah 
 `
 }[type]
-  if (msgg) return conn.sendButton(m.chat, msgg, wm, 'REGISTRASI', `.daftar ${namae}.18`, m, { contextInfo: { mentionedJid: [syappa] }})
+  if (msgg) return conn.sendButton(m.chat, msgg, Daftar, 'REGISTRASI', `.daftar ${namae}.18`, m, { contextInfo: { mentionedJid: [syappa] }})
 }
 
 let wm = global.wm
