@@ -1,7 +1,6 @@
 let util = require('util')
 let simple = require('./lib/simple')
 let { MessageType } = require('@adiwajshing/baileys')
-let wm = global.wm
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(resolve, ms))
@@ -591,6 +590,7 @@ Silahkan Daftar Dengan Klik Button Dibawah
   if (msgg) return conn.sendButton(m.chat, msgg, wm, 'REGISTRASI', `.daftar ${namae}.18`, m, { contextInfo: { mentionedJid: [syappa] }})
 }
 
+let wm = global.wm
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
