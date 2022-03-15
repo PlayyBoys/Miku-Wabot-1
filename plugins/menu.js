@@ -5,33 +5,33 @@ let path = require('path')
 let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 let tags = {
-    'main': 'Utama',
-    'game': 'Game',
-    'rpg': 'Rpg',
-    'jadian': 'Jadian',
-    'xp': 'Exp & Limit',
-    'sticker': 'Stiker',
-    'kerang': 'Kerang Ajaib',
-    'ep': 'Ephoto',
-    'ph': 'Photooxy',
-    'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
-    'group': 'Grup',
-    'premium': 'Premium',
-    'internet': 'Internet',
-    'anonymous': 'Anonymous Chat',
-    'nulis': 'MagerNulis & Logo',
-    'downloader': 'Downloader',
-    'tools': 'Tools',
-    'fun': 'Fun',
-    'database': 'Database',
-    'vote': 'Voting',
-    'absen': 'Absen',
-    'quran': 'Al Qur\'an',
-    'audio': 'Pengubah Suara',
-    'jadibot': 'Jadi Bot',
-    'info': 'Info',
-    '': 'Tanpa Kategori',
+    'main': '👑Utama👑',
+    'game': '👑Game👑',
+    'rpg': '👑Rpg👑',
+    'jadian': '👑Jadian👑',
+    'xp': '👑Exp & Limit👑',
+    'sticker': '👑Stiker👑',
+    'kerang': '👑Kerang Ajaib👑',
+    'ep': '👑Ephoto👑',
+    'ph': '👑Photooxy👑',
+    'quotes': '👑Quotes👑',
+    'admin': `👑Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}👑`,
+    'group': '👑Grup👑',
+    'premium': '👑Premium👑',
+    'internet': '👑Internet👑',
+    'anonymous': '👑Anonymous Chat👑',
+    'nulis': '👑MagerNulis & Logo👑',
+    'downloader': '👑Downloader👑',
+    'tools': '👑Tools👑',
+    'fun': '👑Fun👑',
+    'database': '👑Database👑',
+    'vote': '👑Voting👑',
+    'absen': '👑Absen👑',
+    'quran': '👑Al Qur\'an👑',
+    'audio': '👑Pengubah Suara👑',
+    'jadibot': '👑Jadi Bot👑',
+    'info': '👑Info👑',
+    '': '👑Tanpa Kategori👑',
   }
 
 const defaultMenu = {
@@ -163,7 +163,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send3ButtonImg(m.chat, await (await fetch(image)).buffer(), `*Hi!, ${name} ${ucapan()}*\n*I'am ᴍɪᴋᴜ-ʙᴏᴛ*`
-, text.trim(), 'Owner Bot', `,owner`, 'Rules', '.rules', 'Donasi', '.donasi', m)
+, text.trim(), '👑 Owner Bot 👑', `,owner`, '📄 Rules 📄', '.rules', '🤑 Donasi 🤑', '.donasi', m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
